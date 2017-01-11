@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eduardossantos/NodeAPIs/issues"
   },
-  "homepage": "https://github.com/eduardossantos/NodeAPIs#readme"
+  "homepage": "https://github.com/eduardossantos/NodeAPIs#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
