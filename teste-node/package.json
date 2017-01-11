@@ -1,0 +1,19 @@
+{
+  "name": "teste-node",
+  "version": "1.0.0",
+  "description": "Site da casa do codigo",
+  "main": "produtos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardossantos/NodeAPIs.git"
+  },
+  "author": "Eduardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardossantos/NodeAPIs/issues"
+  },
+  "homepage": "https://github.com/eduardossantos/NodeAPIs#readme"
+}
