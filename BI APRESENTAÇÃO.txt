@@ -1,0 +1,23 @@
+SELECT 
+BI.CPF,
+BI.nomeStakeholder,
+SUM(BI.pontos) 
+AS PONTOS,
+PRO.perfil, 
+BI.cnpj,
+BI.ddd,
+BI.UF,
+BI.idTerritorio,
+BI.nomeTerritorio,
+BI.regional 
+FROM BI_DIMENSAO_PONTUACAO BI 
+INNER JOIN TB_PROMOTORES PRO 
+ON BI.cpf = PRO.CPF
+GROUP BY BI.CPF,BI.nomeStakeholder,BI.cnpj,BI.ddd,BI.UF,BI.idTerritorio,BI.nomeTerritorio,BI.regional,PRO.perfil
+ORDER BY 3 DESC
+
+SELECT SUM(PONTOS) AS PONTOS
+FROM BI_DIMENSAO_PONTUACAO
+
+
+<!-- //////////////// GRAFICO PLANOS //////////////// -->
