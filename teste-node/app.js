@@ -1,6 +1,5 @@
 // criando o servidor
 var app = require('./config/express')();
-var rotasProdutos = require('./app/routes/produtos')(app);
 // configurando as rotas
 
 

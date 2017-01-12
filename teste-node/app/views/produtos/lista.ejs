@@ -4,17 +4,20 @@
     <title>Title</title>
     </head>
     <body>
-
         <table>
             <tr>
                 <td>id</td>
-    <td>Nome</td>
-    </tr>
-    <tr>
-        <td>1</td>
-    <td>Produto do Eduardo</td>
-</tr>
-</table>
+                <td>Nome</td>
+            </tr>
+            <tr>
+                <%for(var i=0; i<lista.length; i++){%>
+                  <tr>
+                      <td><%=lista[i].id%></td>
+                      <td><%=lista[i].nome%></td>
+                  </tr>
+                <%}%>
+            </tr>
+        </table>
 
-</body>
+    </body>
 </html>

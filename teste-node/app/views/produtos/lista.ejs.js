@@ -9,12 +9,18 @@ lang;
     < td > Nome < /td>
     < /tr>
     < tr >
-    1 < /td>
-    < td > Produto;
-do
-    Eduardo < /td>
+     % ;
+for (var i = 0; i < lista.length; i++) {
+     %  >
+    ;
+    lista[i].id %  > /td>
+        < td > ;
+    lista[i].nome %  > /td>
         < /tr>
-        < /table>
-        < /body>
-        < /html>;
-while ();
+        <  % ;
+}
+ %  >
+    /tr>
+    < /table>
+    < /body>
+    < /html>;
