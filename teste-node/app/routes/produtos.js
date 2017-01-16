@@ -5,7 +5,15 @@ module.exports = function (app) {
         var ProdutosDAO = new app.infra.ProdutosDAO(connection);
         //consulta
         ProdutosDAO.lista(function (err,result) {
-            response.render('produtos/lista',{lista:result});
+            response.format({
+                html:function () {
+                    response.render('produtos/lista',{lista:result});
+                },
+                json: function () {
+                    response.json(result);
+                }
+            });
+
         });
         connection.end();
     }
@@ -15,6 +23,7 @@ module.exports = function (app) {
 
         response.render('produtos/form')
     });
+
 
     app.post('/produtos',function (request,response) {
 

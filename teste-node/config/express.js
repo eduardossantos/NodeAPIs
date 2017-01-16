@@ -12,6 +12,7 @@ module.exports = function () {
 
     // Trata as requisições
     app.use(bodyParser.urlencoded({extended:true}));
+    app.use(bodyParser.json());
 
     // carrega tudo da pasta routes, depois tudo da pasta infra, restringindo a busca a partir da pasta app.
     load('routes',{cwd:'app'})
