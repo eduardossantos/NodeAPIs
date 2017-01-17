@@ -15,6 +15,7 @@ module.exports = function (app) {
             });
 
         });
+
         connection.end();
     }
     app.get('/produtos',listaProdutos);
