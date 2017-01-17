@@ -3,30 +3,30 @@
     <meta charset="UTF-8">
     <title> Insert Form</title>
 </head>
-<body
+<body>
     <div class ='errors'>
-        <%if(errorsValidation){%>
+    <%if(errorsValidation){%>
     <ul>
         <%for(var i=0;i<errorsValidation.length;i++){%>
-            <li><%=errorsValidation[i].param%> - <%=errorsValidation[i].msg%></li>
-        <%}%>
+        <li><%=errorsValidation[i].param%> - <%=errorsValidation[i].msg%></li>
+            <%}%>
     </ul>
     <%}%>
+</div>
+<form action="/produtos" method="post">
+    <div>
+        <label for="titulo">Título</label>
+<input type="text" id="titulo" value="<%=produto.titulo%>" name="titulo" placeholder="Coloque o título do livro"/>
     </div>
-    <form action="/produtos" method="post">
-        <div>
-            <label for="titulo">Título</label>
-            <input type="text" id="titulo" value="<%=produto.titulo%>" name="titulo" placeholder="Coloque o título do livro"/>
-        </div>
-        <div>
+    <div>
         <label for="descricao">Descrição</label>
-        <textarea id="descricao" value="<%=produto.descricao%>" name="descricao">Coloque a descrição do livro</textarea>
-        </div>
-        <div>
-        <label for="preco">Preço</label>
-        <input type="text" id="preco" value="<%=produto.preco%>" name="preco" placeholder="Coloque valor do livro"/>
-        </div>
-        <input type="submit" value="Gravar">
+<textarea id="descricao" value="<%=produto.descricao%>" name="descricao">Coloque a descrição do livro</textarea>
+</div>
+<div>
+    <label for="preco">Preço</label>
+<input type="text" id="preco" value="<%=produto.preco%>" name="preco" placeholder="Coloque valor do livro"/>
+</div>
+<input type="submit" value="Gravar">
     </form>
-</body>
+    </body>
     </html>

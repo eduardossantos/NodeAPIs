@@ -7,13 +7,17 @@
         <table>
             <tr>
                 <td>id</td>
-                <td>Nome</td>
+                <td>Título do Livro</td>
+                <td>Descricão</td>
+                <td>Preço</td>
             </tr>
             <tr>
                 <%for(var i=0; i<lista.length; i++){%>
                   <tr>
                       <td><%=lista[i].id%></td>
-                      <td><%=lista[i].nome%></td>
+                      <td><%=lista[i].titulo%></td>
+                      <td><%=lista[i].descricao%></td>
+                      <td><%="R$ "+lista[i].preco%></td>
                   </tr>
                 <%}%>
             </tr>

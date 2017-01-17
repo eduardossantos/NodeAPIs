@@ -5,13 +5,12 @@ lang;
     Insert;
 Form < /title>
     < /head>
-    < body
-    < div;
-var default_1 = (function () {
-    function default_1() {
-    }
-    return default_1;
-}());
+    < body >
+    (function () {
+        function class_1() {
+        }
+        return class_1;
+    }());
 'errors' >
      % ;
 if (errorsValidation) {

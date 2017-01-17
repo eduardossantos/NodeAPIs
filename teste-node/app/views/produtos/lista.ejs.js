@@ -6,16 +6,25 @@ lang;
     < /head>
     < body >
     id < /td>
-    < td > Nome < /td>
-    < /tr>
-    < tr >
-     % ;
+    < td > Título;
+do
+    Livro < /td>
+        < td > Descricão < /td>
+        < td > Preço < /td>
+        < /tr>
+        < tr >
+         % ;
+while ();
 for (var i = 0; i < lista.length; i++) {
      %  >
     ;
     lista[i].id %  > /td>
         < td > ;
-    lista[i].nome %  > /td>
+    lista[i].titulo %  > /td>
+        < td > ;
+    lista[i].descricao %  > /td>
+        < td > ;
+    "R$ " + lista[i].preco %  > /td>
         < /tr>
         <  % ;
 }

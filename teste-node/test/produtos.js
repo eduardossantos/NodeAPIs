@@ -18,15 +18,13 @@ beforeEach(function (done) {
 describe('#ProdutosController',function () {
     it('#listagem json',function (done) {
         request.get('/produtos')
-            .set('Accept','application/json')
             .expect('Content-Type',/json/)
             .expect(200,done);
         });
 
     it('#Cadastro de novo produto',function (done) {
-
         request.post('/produtos')
-            .send({nome:'Livro de teste'})
+            .send({titulo:'Livro de teste',descricao:'Descricão de teste',preco:220.10 })
             .expect(302,done);
         
     })
