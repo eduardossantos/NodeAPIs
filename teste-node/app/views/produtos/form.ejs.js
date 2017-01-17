@@ -34,11 +34,30 @@ if (errorsValidation) {
 action = "/produtos";
 method = "post" >
 ;
-for ( = "nome" > Nome < /label>
-    < input; type = "text"; id = "nome")
-    value = "<%=produto.nome%>";
-name = "nome";
-placeholder = "Coloque o nome do livro" /  >
+for ( = "titulo" > Título < /label>
+    < input; type = "text"; id = "titulo")
+    value = "<%=produto.titulo%>";
+name = "titulo";
+placeholder = "Coloque o título do livro" /  >
+    /div>
+    < div >
+;
+for ( = "descricao" > Descrição < /label>
+    < textarea; id = "descricao"; value = "<%=produto.descricao%>")
+    name = "descricao" > Coloque;
+a;
+descrição;
+do
+    livro < /textarea>
+        < /div>
+        < div >
+    ;
+while ();
+for ( = "preco" > Preço < /label>
+    < input; type = "text"; id = "preco")
+    value = "<%=produto.preco%>";
+name = "preco";
+placeholder = "Coloque valor do livro" /  >
     /div>
     < input;
 type = "submit";

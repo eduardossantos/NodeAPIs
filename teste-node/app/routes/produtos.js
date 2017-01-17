@@ -31,7 +31,9 @@ module.exports = function (app) {
 
         var produto = request.body;
 
-        request.assert('nome','O nome é obrigatório').notEmpty();
+        request.assert('titulo','O nome é obrigatório').notEmpty();
+        request.assert('descricao','O nome é obrigatório').notEmpty();
+        request.assert('preco','O nome é obrigatório').notEmpty();
 
         var errors =  request.validationErrors();
         if(errors){
