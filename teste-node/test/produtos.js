@@ -9,4 +9,12 @@ describe('#ProdutosController',function () {
             .expect(200,done);
         });
 
+    it('#Cadastro de novo produto',function (done) {
+
+        request.post('/produtos')
+            .send({nome:'Livro de teste'})
+            .expect(302,done);
+        
+    })
+
 });
