@@ -1,10 +1,13 @@
 module.exports = function (app) {
-    var listaProdutos = function (request,response) {
+    var listaProdutos = function (request,response,next) {
         //conexão
         var connection =   app.infra.connectionFactory(); // após o load, a invocação do método de conexão fica pelo path.
         var ProdutosDAO = new app.infra.ProdutosDAO(connection);
         //consulta
         ProdutosDAO.lista(function (err,result) {
+            if(err){
+                return next(err);
+            }
             response.format({
                 html:function () {
                     response.render('produtos/lista',{lista:result});
@@ -13,7 +16,6 @@ module.exports = function (app) {
                     response.json(result);
                 }
             });
-
         });
 
         connection.end();
