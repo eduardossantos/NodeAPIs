@@ -23,7 +23,7 @@ module.exports = function (app) {
 
         response.render('produtos/form',{errorsValidation:{},produto:{}})
     });
-    
+
     app.post('/produtos',function (request,response) {
 
         var produto = request.body;
